@@ -12,10 +12,10 @@ $hero = $heroRepository->findByName($_POST['name']);
 
 
 if(!$hero){
-    $herorRepository->createHero($_POST['name']);
+    $heroRepository->createHero($_POST['name']);
     $hero = $heroRepository->findByName($_POST['name']);
 }
 
 $_SESSION['hero'] = $hero;
 
-header("Location: ./public/fight.php");
+header("Location: ../public/fight.php");

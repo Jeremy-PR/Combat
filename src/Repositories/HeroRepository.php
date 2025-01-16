@@ -8,7 +8,7 @@ class HeroRepository extends AbstractRepository
         parent::__construct();
     }
 
-    public function findByName(string $prenom): ?Hero
+    public function findByName(string $name): ?Hero
     {
         $stmt = $this->pdo->prepare("SELECT * FROM hero WHERE name = :name");
         $stmt->bindParam(":name", $name, PDO::PARAM_STR);
@@ -18,21 +18,22 @@ class HeroRepository extends AbstractRepository
         $heroData = $stmt->fetch();
 
         if (!$heroData) {
-            return null;
+            // Si aucun héros trouvé, créer un héro par défaut
+            // Vous pouvez définir une valeur par défaut pour 'life' comme 100
+            return new Hero(0, $name, 100);
         }
-
         return HeroMapper::mapToObject($heroData);
     }
-
 
 
     public function createHero(Hero $hero): void
     {
         $stmt = $this->pdo->prepare("INSERT INTO hero (name, life) VALUES (:name, :life)");
         $stmt->execute([
-            'prenom' => $hero->getName(),
-            ':point_vie' => $hero->getLife()
+            ':name' => $hero->getName(),
+            ':life' => $hero->getLife()
         ]);
     }
-}
+      }
+
 
