@@ -7,14 +7,14 @@ class Hero
 
     private string $name;
 
-    private int $hp;
+    private int $life;
 
 
-    public function __construct(int $id, string $name, int $hp)
+    public function __construct(int $id, string $name, int $life)
     {
         $this->id = $id;
         $this->name = $name;
-        $this->hp = 100;
+        $this->life = 100;
     }
 
 
@@ -30,12 +30,12 @@ class Hero
         return $this->name;
     }
 
-    public function getHp(): int
+    public function getLife(): int
     {
-        return $this->hp;
+        return $this->life;
     }
-    public function setHp(int $hp): void
+    public function setLife(int $life): void
     {
-        $this->hp = $hp;
+        $this->life = $life;
     }
 }

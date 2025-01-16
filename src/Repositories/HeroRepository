@@ -1,40 +1,38 @@
 <?php
 
+
 class HeroRepository extends AbstractRepository
 {
-
-    final public function __construct()
+    final public function construct()
     {
         parent::__construct();
-        // Activer le mode d'erreur pour PDO
-        $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
-    public function findByName(string $name): ?Hero
+    public function findByName(string $prenom): ?Hero
     {
-        $stmt = $this->pdo->prepare("SELECT * FROM heroes WHERE name = :name");
+        $stmt = $this->pdo->prepare("SELECT * FROM hero WHERE name = :name");
         $stmt->bindParam(":name", $name, PDO::PARAM_STR);
         $stmt->execute();
 
-        $herodata = $stmt->fetch();
 
-        if (!$herodata) {
+        $heroData = $stmt->fetch();
+
+        if (!$heroData) {
             return null;
         }
 
-        $herodata = HeroMapper::mapToObject($herodata);
-        return $herodata;
+        return HeroMapper::mapToObject($heroData);
     }
 
-    public function createHero(string $name): void
+
+
+    public function createHero(Hero $hero): void
     {
-        try {
-            $stmt = $this->pdo->prepare("INSERT INTO heroes (name) VALUES (:name)");
-            $stmt->bindParam(":name", $name, PDO::PARAM_STR);
-            $stmt->execute();
-        } catch (PDOException $e) {
-            // Afficher l'erreur SQL
-            echo 'Erreur SQL : ' . $e->getMessage();
-        }
+        $stmt = $this->pdo->prepare("INSERT INTO hero (name, life) VALUES (:name, :life)");
+        $stmt->execute([
+            'prenom' => $hero->getName(),
+            ':point_vie' => $hero->getLife()
+        ]);
     }
 }
+
