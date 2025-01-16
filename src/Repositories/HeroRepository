@@ -1,0 +1,40 @@
+<?php
+
+class HeroRepository extends AbstractRepository
+{
+
+    final public function __construct()
+    {
+        parent::__construct();
+        // Activer le mode d'erreur pour PDO
+        $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    }
+
+    public function findByName(string $name): ?Hero
+    {
+        $stmt = $this->pdo->prepare("SELECT * FROM heroes WHERE name = :name");
+        $stmt->bindParam(":name", $name, PDO::PARAM_STR);
+        $stmt->execute();
+
+        $herodata = $stmt->fetch();
+
+        if (!$herodata) {
+            return null;
+        }
+
+        $herodata = HeroMapper::mapToObject($herodata);
+        return $herodata;
+    }
+
+    public function createHero(string $name): void
+    {
+        try {
+            $stmt = $this->pdo->prepare("INSERT INTO heroes (name) VALUES (:name)");
+            $stmt->bindParam(":name", $name, PDO::PARAM_STR);
+            $stmt->execute();
+        } catch (PDOException $e) {
+            // Afficher l'erreur SQL
+            echo 'Erreur SQL : ' . $e->getMessage();
+        }
+    }
+}

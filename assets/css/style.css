@@ -1,0 +1,136 @@
+/* Styles généraux pour la page */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/arene_home.webp'); /* Chemin de l'image de fond */
+    background-size: cover; /* L'image couvre tout l'écran */
+    background-position: center; /* L'image est centrée */
+    background-repeat: no-repeat; /* Pas de répétition de l'image */
+    background-attachment: fixed; /* L'image reste fixe lors du défilement */
+    font-family: 'Arial', sans-serif; /* Police par défaut */
+    color: #fff; /* Couleur du texte pour contraster avec le fond */
+}
+
+/* Ajout d'une superposition sombre sur le fond pour améliorer la lisibilité */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Couche sombre avec 50% d'opacité */
+    z-index: -1; /* Place la couche derrière tout le contenu */
+}
+
+/* Titre principal */
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+    margin-top: 50px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Ajoute un ombrage pour le texte */
+}
+
+/* Section pour créer un héros */
+.create-hero-section {
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc semi-transparent */
+    border-radius: 15px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombre portée pour l'effet 3D */
+}
+
+/* Titre de la section */
+.create-hero-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Style du formulaire */
+.create-hero-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Label des champs de saisie */
+.create-hero-form label {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Champs de saisie */
+.create-hero-form input {
+    padding: 12px;
+    font-size: 1.2rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus sur les champs d'entrée */
+.create-hero-form input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+}
+
+/* Bouton de soumission */
+.create-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Effet de survol du bouton */
+.create-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px); /* Légère élévation du bouton */
+}
+
+/* Effet au clic sur le bouton */
+.create-button:active {
+    background-color: #003f7f;
+    transform: translateY(0); /* Retourne à la position initiale */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .create-hero-section {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .create-hero-form input {
+        font-size: 1rem;
+    }
+
+    .create-button {
+        font-size: 1rem;
+    }
+}
+
+.tenor-gif-embed{
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    margin: 20px auto;
+}
