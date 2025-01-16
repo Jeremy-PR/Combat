@@ -2,10 +2,10 @@
 
 session_start();
 
-if (isset($_SESSION['Hero']) && !empty($_SESSION['Hero'])) {
-    header('Location: ./fight.php');
-    exit;
-}
+// if (isset($_SESSION['hero']) && !empty($_SESSION['hero'])) {
+//     header('Location: ./fight.php');
+//     exit;
+// }
 
 ?>
 
@@ -19,7 +19,7 @@ if (isset($_SESSION['Hero']) && !empty($_SESSION['Hero'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Choisissez votre héros</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../public/assets/css/style.css">
 </head>
 
 <body>
@@ -29,7 +29,7 @@ if (isset($_SESSION['Hero']) && !empty($_SESSION['Hero'])) {
 
     <div class="create-hero-section">
         <h2>Créer votre héros</h2>
-        <form action="../process/process.php" method="POST" class="create-hero-form">
+        <form action="../process/create-hero-process.php" method="POST" class="create-hero-form">
             <div class="tenor-gif-embed" data-postid="22274571" data-share-method="host" data-aspect-ratio="1.01911" data-width="50%"><a href="https://tenor.com/view/street-fighter-dudley-gif-22274571">Street Fighter Dudley Sticker</a>from <a href="https://tenor.com/search/street+fighter-stickers">Street Fighter Stickers</a></div>
             <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
             <label for="name">Nom de votre héros :</label>

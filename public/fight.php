@@ -1,5 +1,16 @@
-<?php
-include_once '../utils/autoloader.php';
+<!-- <?php
+// include_once '../utils/autoloader.php';
 
 
-var_dump($_POST);
+// session_start();
+
+// // Vérifie si le héros existe dans la session
+// if (isset($_SESSION['hero'])) {
+//     $hero = $_SESSION['hero'];
+  
+// } else {
+//     echo "Aucun héros trouvé dans la session.";
+// }
+?>
+
+

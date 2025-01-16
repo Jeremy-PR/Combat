@@ -134,3 +134,57 @@ h1 {
     overflow: hidden;
     margin: 20px auto;
 }
+
+/* Styles de la carte globale */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    width: 200px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Titre de la carte */
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Vie du combattant */
+.card-life {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #777;
+}
+
+/* Bouton de la carte */
+.card-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.card-btn:hover {
+    background-color: #2980b9;
+}

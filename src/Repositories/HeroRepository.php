@@ -18,9 +18,9 @@ class HeroRepository extends AbstractRepository
         $heroData = $stmt->fetch();
 
         if (!$heroData) {
-            // Si aucun héros trouvé, créer un héro par défaut
+            // Si aucun héros trouvé, retourner null
             // Vous pouvez définir une valeur par défaut pour 'life' comme 100
-            return new Hero(0, $name, 100);
+            return null;
         }
         return HeroMapper::mapToObject($heroData);
     }
@@ -33,7 +33,8 @@ class HeroRepository extends AbstractRepository
             ':name' => $hero->getName(),
             ':life' => $hero->getLife()
         ]);
+
+        // Récupérer l'ID généré
+        $hero->setId($this->pdo->lastInsertId());
     }
-      }
-
-
+}
