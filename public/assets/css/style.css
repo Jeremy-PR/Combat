@@ -284,6 +284,14 @@ body::before {
     transform: translateY(0); 
 }
 
+.titre_principal{
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    font-size: x-large;
+}
+
 /* Mise en page responsive pour mobile */
 @media (max-width: 768px) {
     .before-fight h1 {

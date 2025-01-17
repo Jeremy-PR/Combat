@@ -3,17 +3,16 @@ require_once '../utils/autoloader.php';
 session_start();
 
 
+$hero = $_SESSION['hero'];  
 
-    $hero = $_SESSION['hero'];
-    $monster = new Monster();
-    
+$monster = new Monster();
+
 
 $heroName = $hero->getName();
 $heroLife = $hero->getLife();
 
 
-$realfight = [];
-
+$combatResults = $hero->fight($monster);  
 
 ?>
 
@@ -22,10 +21,14 @@ $realfight = [];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Combat</title>
+    <link rel="stylesheet" href="../public/assets/css/style.css">
 </head>
 <body>
-    <a class = "combat" href="">Lancer le combat </a>
+
+<?php foreach ($combatResults as $result): ?>
+    <p><?= htmlspecialchars($result) ?></p>
+<?php endforeach; ?>
+
 </body>
 </html>

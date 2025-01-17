@@ -49,7 +49,7 @@ $heroLife = $hero->getLife();
     </div>
 
     <div class="actions">
-        <a href="fight.php">Allez vous battre</a>
+        <a href="./fight.php">Allez vous battre</a>
     </div>
 </div>
 

@@ -1,11 +1,7 @@
 <?php
 session_start();
 
-// Si un héros est déjà créé, rediriger vers la page de combat
-// if (isset($_SESSION['hero']) && !empty($_SESSION['hero'])) {
-//     header('Location: ./fight.php');
-//     exit;
-// }
+
 ?>
 
 <!DOCTYPE html>
