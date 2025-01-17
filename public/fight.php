@@ -25,10 +25,13 @@ $combatResults = $hero->fight($monster);
     <link rel="stylesheet" href="../public/assets/css/style.css">
 </head>
 <body>
-
-<?php foreach ($combatResults as $result): ?>
-    <p><?= htmlspecialchars($result) ?></p>
-<?php endforeach; ?>
+<section class="realfight">
+    <div class="combat-log">
+        <?php foreach ($combatResults as $result): ?>
+            <p><?= htmlspecialchars($result) ?></p>
+        <?php endforeach; ?>
+    </div>
+</section>
 
 </body>
 </html>

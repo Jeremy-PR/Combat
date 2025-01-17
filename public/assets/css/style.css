@@ -292,6 +292,48 @@ body::before {
     font-size: x-large;
 }
 
+.realfight {
+    background-color: #121212; /* Fond sombre pour mettre en valeur le texte */
+    padding: 20px; /* Un peu d'espace autour */
+    margin: 20px auto; /* Centrer la section */
+    width: 80%; /* Largeur de la section */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre pour le relief */
+    color: #fff; /* Texte en blanc pour contraster */
+    font-family: 'Arial', sans-serif; /* Police simple et claire */
+}
+
+.realfight .combat-log {
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour le log */
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #333;
+}
+
+.realfight p {
+    font-size: 16px; 
+    line-height: 1.5; 
+    margin: 10px 0; 
+    padding: 10px;
+    background-color: #1e1e1e; 
+    border-left: 5px solid #ff5722; 
+    transition: background-color 0.3s ease; 
+}
+
+.realfight p:hover {
+    background-color: #333333; 
+    cursor: pointer; 
+}
+
+.realfight p:first-child {
+    font-weight: bold; 
+}
+
+.realfight p:last-child {
+    color: #ff5722; 
+}
+
+
 /* Mise en page responsive pour mobile */
 @media (max-width: 768px) {
     .before-fight h1 {
