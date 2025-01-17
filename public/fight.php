@@ -1,16 +1,12 @@
-<!-- <?php
-// include_once '../utils/autoloader.php';
-
-
-// session_start();
-
-// // Vérifie si le héros existe dans la session
-// if (isset($_SESSION['hero'])) {
-//     $hero = $_SESSION['hero'];
-  
-// } else {
-//     echo "Aucun héros trouvé dans la session.";
-// }
-?>
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    
+</body>
+</html>
