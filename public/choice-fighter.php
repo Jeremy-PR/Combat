@@ -1,14 +1,12 @@
 <?php
 include_once '../utils/autoloader.php';
 
-$fighterRepository = new FighterRepository();
-$fighters = $fighterRepository->findAll();
+// Charger tous les combattants
+$fighterRepo = new FighterRepository();
+$fighters = $fighterRepo->findAll();
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $selectedFighterId = $_POST['fighter']; // ID du combattant sélectionné
-    $selectedFighter = $fighterRepository->findById($selectedFighterId); // Trouver le combattant sélectionné
-    echo "Vous avez choisi le combattant : " . $selectedFighter->getFightername();
-}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -17,17 +15,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Choisir un Combattant</title>
+    <link rel="stylesheet" href="../public/assets/css/style.css">
 </head>
 <body>
 
 <h1>Choisissez un combattant parmi les prédéfinis</h1>
 
-<form action="fighter.php" method="POST">
+<form action="" method="POST">
     <label for="fighter">Sélectionner un combattant :</label>
     <select name="fighter" id="fighter" required>
         <option value="">-- Choisir un combattant --</option>
         <?php foreach ($fighters as $fighter): ?>
-            <option value="<?= $fighter->getId() ?>"><?= htmlspecialchars($fighter->getFightername()) ?></option>
+            <option value="<?= $fighter->getImage() ?>">
+                <?= htmlspecialchars($fighter->getFightername()) ?>
+            </option>
         <?php endforeach; ?>
     </select>
     <button type="submit">Choisir</button>

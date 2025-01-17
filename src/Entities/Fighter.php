@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 
 class Fighter
@@ -44,4 +44,4 @@ class Fighter
     {
         $this->fightername = $fightername;
     }
-}
+} 
