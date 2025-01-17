@@ -2,19 +2,18 @@
 require_once '../utils/autoloader.php';
 session_start();
 
-if (isset($_SESSION['hero'])) {
-    $hero = $_SESSION['hero'];
-    $heroName = $hero->getName();
-    $heroLife = $hero->getLife();
-    $heroAttaque = $hero->getAttaque();
-    $heroDefense = $hero->getDefense();
-    $heroImage = $hero->getImage();
-} else {
-    header("Location: create-hero.php");
-    exit;
-}
 
-$monster = new Monster();
+
+    $hero = $_SESSION['hero'];
+    $monster = new Monster();
+
+
+$heroName = $hero->getName();
+$heroLife = $hero->getLife();
+
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -35,27 +34,22 @@ $monster = new Monster();
   
 
     <div class="hero-card">
-        <img src="./assets/img/Franklin.png" alt="<?= htmlspecialchars($heroName) ?>" class="hero-image">
+        <h2><?= htmlspecialchars($heroName) ?></h2>
+        <img src="./assets/img/Franklin.png"  class="hero-image">
         <div class="hero-info">
-            <h2><?= htmlspecialchars($heroName) ?></h2>
-            <p><strong>Vie:</strong> <?= $heroLife ?> HP</p>
-            <div class="hero-stats">
-                <p><span>Attaque:</span> <?= $heroAttaque ?> </p>
-                <p><span>Défense:</span> <?= $heroDefense ?> </p>
-            </div>
+            <p>Vie : <?= $hero->getLife() ?></p>     
         </div>
     </div>
 
     <div class="hero-card">
-        <h2>Le Monstre : <?= htmlspecialchars($monster->getName()) ?></h2>
+        <h2> <?= htmlspecialchars($monster->getName()) ?></h2>
         <img src="./assets/img/Bugsbunny.png" alt="Image du monstre" class="hero-image">
         <p>Vie : <?= $monster->getLife() ?></p>
-        <p>Attaque : <?= $monster->getAttack() ?></p>
-        <p>Défense : <?= $monster->getDefense() ?></p>
+        
     </div>
 
     <div class="actions">
-        <a href="fight.php">Lancer le combat</a>
+        <a href="fight.php">Allez vous battre</a>
     </div>
 </div>
 

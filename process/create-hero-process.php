@@ -14,8 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name'])) {
 
         $hero = new Hero(0, $_POST['name']);
         $hero->setLife(100);
-        $hero->setAttaque(20);
-        $hero->setDefense(15);
+       
         $hero->setImage('default.jpg');
 
         $heroRepository->createHero($hero);

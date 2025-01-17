@@ -5,8 +5,7 @@ class Hero
     private int $id;
     private string $name;
     private int $life;
-    private int $attaque;
-    private int $defense;
+   
     private string $image;
 
 
@@ -14,9 +13,7 @@ class Hero
     {
         $this->id = $id;
         $this->name = $name;
-        $this->life = 100;
-        $this->attaque = 20;
-        $this->defense = 15;
+        $this->life = 100;  
         $this->image = "../public/assets/img/Franklin.png";
 
     
@@ -56,27 +53,6 @@ class Hero
     }
 
 
-    public function getAttaque(): int
-    {
-        return $this->attaque;
-    }
-
-    public function setAttaque(int $attaque): void
-    {
-        $this->attaque = $attaque;
-    }
-
-   
-    public function getDefense(): int
-    {
-        return $this->defense;
-    }
-
-    public function setDefense(int $defense): void
-    {
-        $this->defense = $defense;
-    }
-
   
     public function getImage(): ?string
     {
@@ -87,4 +63,16 @@ class Hero
     {
         $this->image = $image;
     }
+
+    public function hit(Monster $monster): int{
+
+        $damage = rand(10,20) ;       
+          
+          $monster -> setLife($monster -> getLife()- $damage);
+  
+          return $damage;
+          }
+  
+
+
 }

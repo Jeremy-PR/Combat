@@ -1,3 +1,22 @@
+<?php
+require_once '../utils/autoloader.php';
+session_start();
+
+
+
+    $hero = $_SESSION['hero'];
+    $monster = new Monster();
+    
+
+$heroName = $hero->getName();
+$heroLife = $hero->getLife();
+
+
+$realfight = [];
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +26,6 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    
+    <a class = "combat" href="">Lancer le combat </a>
 </body>
 </html>

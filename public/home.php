@@ -21,7 +21,7 @@ session_start();
 <body>
 
     <header>
-        <h1>Fight in the Garage</h1>
+        <h1 class ="titre_principal">Fight in the Garage</h1>
     </header>
 
     <div class="create-hero-section">
