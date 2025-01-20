@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 
 ?>
@@ -17,22 +16,19 @@ session_start();
 <body>
 
     <header>
-        <h1 class ="titre_principal">Fight in the Garage</h1>
+        <h1 class="titre_principal">Fight in the Garage</h1>
     </header>
 
     <div class="create-hero-section">
         <h2>Créez votre Héros</h2>
 
         <form action="../process/create-hero-process.php" method="POST" class="create-hero-form">
-            <div class="tenor-gif-embed" data-postid="22274571" data-share-method="host" data-aspect-ratio="1.01911" data-width="50%">
-                <a href="https://tenor.com/view/street-fighter-dudley-gif-22274571">Street Fighter Dudley Sticker</a>from <a href="https://tenor.com/search/street+fighter-stickers">Street Fighter Stickers</a>
-            </div>
-            <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-            
-            <label for="name">Nom de votre héros :</label>
+
+            <label for="name">Donnez un nom à votre héros</label>
+            <div class="tenor-gif-embed" data-postid="13940508" data-share-method="host" data-aspect-ratio="0.990991" data-width="100%"><a href="https://tenor.com/view/mortal-kombat-mk-dragon-dragon-fire-sigil-gif-13940508">Mortal Kombat Mk Sticker</a>from <a href="https://tenor.com/search/mortal+kombat-stickers">Mortal Kombat Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
             <input type="text" id="name" name="name" placeholder="Entrez un nom" required>
 
-            <button type="submit" class="create-button">Créer</button>
+            <button type="submit" class="create-button">Let's Go</button>
         </form>
     </div>
 

@@ -37,7 +37,29 @@ class HeroRepository extends AbstractRepository
         // Récupérer l'ID généré
         $hero->setId($this->pdo->lastInsertId());
     }
+
+
+
+
+    public function updateLife(Hero $hero): void
+    {
+        try {
+
+            $stmt = $this->pdo->prepare("UPDATE hero SET life = :life WHERE name = :name");
+
+
+            $stmt->execute([
+                ':life' => $hero->getLife(),
+                ':name' => $hero->getName(),
+            ]);
+        } catch (PDOException $error) {
+
+            echo "La mise à jour des points de vie n'a pas pu être faite: " . $error->getMessage();
+        }
+    }
 }
+
+
 
 // Ce qui est fait ici :
 // Ce fichier contient une classe HeroRepository qui hérite de AbstractRepository et gère l'accès aux données liées aux héros dans la base de données.

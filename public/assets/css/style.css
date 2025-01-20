@@ -68,22 +68,25 @@ body::before {
 }
 
 /* Section pour créer un héros */
+/* Section pour créer un héros */
 .create-hero-section {
     margin: 50px auto;
     padding: 30px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.8); /* Fond noir avec opacité */
     border-radius: 15px;
     width: 80%;
     max-width: 500px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(255, 69, 0, 0.5); /* Ombre rouge-orangé */
     backdrop-filter: blur(5px); /* Flou de fond */
+    border: 2px solid rgba(255, 69, 0, 0.8); /* Bordure rouge-orangé */
 }
 
 .create-hero-section h2 {
     font-size: 2.5rem;
-    color: #333;
+    color: #ff4500; /* Rouge-orangé */
     margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(255, 69, 0, 0.8); /* Ombre lumineuse */
 }
 
 .create-hero-form {
@@ -94,29 +97,31 @@ body::before {
 
 .create-hero-form label {
     font-size: 1.2rem;
-    color: #555;
+    color: #ffa500; /* Orange vif */
+    text-shadow: 1px 1px 4px rgba(255, 165, 0, 0.8); /* Ombre lumineuse */
 }
 
 .create-hero-form input {
     padding: 15px;
     font-size: 1.2rem;
-    border: 2px solid #ddd;
+    border: 2px solid rgba(255, 69, 0, 0.8); /* Bordure rouge-orangé */
     border-radius: 10px;
     width: 100%;
     box-sizing: border-box;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    background-color: #f1f1f1;
+    background-color: rgba(255, 255, 255, 0.1); /* Fond blanc translucide */
+    color: #fff; /* Texte blanc */
 }
 
 .create-hero-form input:focus {
-    border-color: #007bff;
+    border-color: #ff6347; /* Rouge clair */
     outline: none;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+    box-shadow: 0 0 12px rgba(255, 69, 0, 0.8); /* Glow rouge */
 }
 
 .create-button {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #ff4500; /* Rouge-orangé intense */
+    color: #fff; /* Texte blanc */
     border: none;
     padding: 15px 30px;
     font-size: 1.5rem;
@@ -124,15 +129,17 @@ body::before {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
     margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Légère ombre noire */
 }
 
 .create-button:hover {
-    background-color: #0056b3;
+    background-color: #e63900; /* Rouge plus sombre */
     transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(255, 69, 0, 0.8); /* Glow rouge-orangé */
 }
 
 .create-button:active {
-    background-color: #003f7f;
+    background-color: #c71f00; /* Rouge intense */
     transform: translateY(0);
 }
 
@@ -144,6 +151,7 @@ body::before {
     overflow: hidden;
     margin: 20px auto;
 }
+
 
 /* Mise en page responsive pour mobile */
 @media (max-width: 768px) {

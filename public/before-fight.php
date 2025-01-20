@@ -5,6 +5,9 @@ session_start();
 
 
     $hero = $_SESSION['hero'];
+
+    $heroRepository = new HeroRepository();
+$heroRepository->updateLife($hero);
     $monster = new Monster();
 
 
@@ -51,6 +54,12 @@ $heroLife = $hero->getLife();
     <div class="actions">
         <a href="./fight.php">Allez vous battre</a>
     </div>
+
+    <div class="actions">
+        <a href="./home.php">Si plus de vie, retour à l'accueil</a>
+    </div>
+
+
 </div>
 
 </body>
