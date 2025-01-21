@@ -81,8 +81,8 @@ class Hero
                 $combatResults[] = $monster->getName() . " a été vaincu !";
             
 
-                $this->setLife($this->getLife() + 50);
-                $combatResults[] = $this->getName() . " gagne 50 points de vie en récompense grâce à sa victoire et fini le combat à  " . $this->getLife() . ".";
+                $this->setLife($this->getLife() + 75);
+                $combatResults[] = $this->getName() . " gagne 75 points de vie en récompense grâce à sa victoire et fini le combat à  " . $this->getLife() . ".";
                 break;
             }
             
@@ -92,7 +92,7 @@ class Hero
             
           
             if ($this->getLife() <= 0) {
-                $combatResults[] = $this->getName() . " a été vaincu !";
+                $combatResults[] =  " GAME OVER !";
                 break;
             }
         }

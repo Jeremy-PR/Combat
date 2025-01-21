@@ -30,7 +30,7 @@ $heroLife = $hero->getLife();
 
 <div class = "beforeFight" >
 
-<div>
+<div class="create-hero-section">
 <h2 class="card"><?= htmlspecialchars($heroName) ?></h2>
     <img src="./assets/img/héros.png" class="hero-image">
     <p class ="card">Vie : <?= $hero->getLife() ?></p>
@@ -38,7 +38,7 @@ $heroLife = $hero->getLife();
 
 
 
-<div>
+<div class="create-hero-section">
 <h2 class ="card"><?= htmlspecialchars($monster->getName()) ?></h2>
     <img src="<?= htmlspecialchars($monster->getImage()) ?>" alt="<?= htmlspecialchars($monster->getName()) ?>" class="monster-image">
     <p class ="card">Vie : <?= $monster->getLife() ?></p>
