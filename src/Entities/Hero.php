@@ -7,12 +7,13 @@ class Hero
     private int $life;
     private string $image;
 
+    
     public function __construct(int $id, string $name)
     {
         $this->id = $id;
         $this->name = $name;
-        $this->life = 100;  // Vie de départ
-        $this->image = "../public/assets/img/Franklin.png";  // Image par défaut
+        $this->life = 100;  
+        $this->image = "../public/assets/img/héros.png";  // Image par défaut
     }
 
     public function getId(): int
@@ -78,6 +79,10 @@ class Hero
           
             if ($monster->getLife() <= 0) {
                 $combatResults[] = $monster->getName() . " a été vaincu !";
+            
+
+                $this->setLife($this->getLife() + 50);
+                $combatResults[] = $this->getName() . " gagne 50 points de vie en récompense grâce à sa victoire et fini le combat à  " . $this->getLife() . ".";
                 break;
             }
             

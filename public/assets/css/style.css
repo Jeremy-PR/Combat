@@ -4,10 +4,14 @@ body {
     padding: 0;
     font-family: 'Arial', sans-serif;
     color: #fff;
-    background-image: url('../img/fond.jpg');
+    background-image: url('../img/decors-jeu-combat-119.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    width: 100%;
 }
 
-/* Superposition sombre sur le fond pour améliorer la lisibilité */
 body::before {
     content: '';
     position: fixed;
@@ -15,42 +19,12 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Couche sombre avec 50% d'opacité */
+    background: rgba(0, 0, 0, 0.5);
     z-index: -1;
 }
 
-/* Section générique des cartes */
-.hero-card {
-    border: 1px solid #ccc;
-    padding: 20px;
-    width: 300px;
-    margin: 20px auto;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    background-color: #f9f9f9;
-}
-
-.hero-card .hero-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
-
-.hero-card h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.hero-card p {
-    font-size: 18px;
-    margin: 5px 0;
-}
-
-/* Styles pour la page d'accueil */
+/* Section pour la page d'accueil */
 .home-body {
-  
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -68,25 +42,24 @@ body::before {
 }
 
 /* Section pour créer un héros */
-/* Section pour créer un héros */
 .create-hero-section {
     margin: 50px auto;
     padding: 30px;
-    background-color: rgba(0, 0, 0, 0.8); /* Fond noir avec opacité */
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 15px;
     width: 80%;
     max-width: 500px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(255, 69, 0, 0.5); /* Ombre rouge-orangé */
-    backdrop-filter: blur(5px); /* Flou de fond */
-    border: 2px solid rgba(255, 69, 0, 0.8); /* Bordure rouge-orangé */
+    box-shadow: 0 4px 12px rgba(255, 69, 0, 0.5);
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 69, 0, 0.8);
 }
 
 .create-hero-section h2 {
     font-size: 2.5rem;
-    color: #ff4500; /* Rouge-orangé */
+    color: #ff4500;
     margin-bottom: 30px;
-    text-shadow: 2px 2px 8px rgba(255, 69, 0, 0.8); /* Ombre lumineuse */
+    text-shadow: 2px 2px 8px rgba(255, 69, 0, 0.8);
 }
 
 .create-hero-form {
@@ -97,31 +70,31 @@ body::before {
 
 .create-hero-form label {
     font-size: 1.2rem;
-    color: #ffa500; /* Orange vif */
-    text-shadow: 1px 1px 4px rgba(255, 165, 0, 0.8); /* Ombre lumineuse */
+    color: #ffa500;
+    text-shadow: 1px 1px 4px rgba(255, 165, 0, 0.8);
 }
 
 .create-hero-form input {
     padding: 15px;
     font-size: 1.2rem;
-    border: 2px solid rgba(255, 69, 0, 0.8); /* Bordure rouge-orangé */
+    border: 2px solid rgba(255, 69, 0, 0.8);
     border-radius: 10px;
     width: 100%;
     box-sizing: border-box;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.1); /* Fond blanc translucide */
-    color: #fff; /* Texte blanc */
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
 }
 
 .create-hero-form input:focus {
-    border-color: #ff6347; /* Rouge clair */
+    border-color: #ff6347;
     outline: none;
-    box-shadow: 0 0 12px rgba(255, 69, 0, 0.8); /* Glow rouge */
+    box-shadow: 0 0 12px rgba(255, 69, 0, 0.8);
 }
 
 .create-button {
-    background-color: #ff4500; /* Rouge-orangé intense */
-    color: #fff; /* Texte blanc */
+    background-color: #ff4500;
+    color: #fff;
     border: none;
     padding: 15px 30px;
     font-size: 1.5rem;
@@ -129,17 +102,17 @@ body::before {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
     margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Légère ombre noire */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .create-button:hover {
-    background-color: #e63900; /* Rouge plus sombre */
+    background-color: #e63900;
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(255, 69, 0, 0.8); /* Glow rouge-orangé */
+    box-shadow: 0 6px 12px rgba(255, 69, 0, 0.8);
 }
 
 .create-button:active {
-    background-color: #c71f00; /* Rouge intense */
+    background-color: #c71f00;
     transform: translateY(0);
 }
 
@@ -150,27 +123,6 @@ body::before {
     height: 0;
     overflow: hidden;
     margin: 20px auto;
-}
-
-
-/* Mise en page responsive pour mobile */
-@media (max-width: 768px) {
-    .create-hero-section {
-        width: 95%;
-        padding: 20px;
-    }
-
-    .home h1 {
-        font-size: 2.5rem;
-    }
-
-    .create-hero-form input {
-        font-size: 1rem;
-    }
-
-    .create-button {
-        font-size: 1.2rem;
-    }
 }
 
 /* Styles pour la page avant le combat */
@@ -190,46 +142,9 @@ body::before {
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
 }
 
-.hero-card {
-    width: 350px;
-    padding: 30px;
-    border: 1px solid #ddd;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 12px;
-    text-align: center;
-    margin: 30px auto;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-
-.hero-card .hero-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    object-fit: cover;
-}
-
-.hero-card h2 {
-    font-size: 2rem;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.hero-card p {
-    font-size: 1.2rem;
-    color: #ddd;
-}
-
-/* Section des stats du héros avant le combat */
-.hero-stats {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.hero-stats p {
-    font-size: 1.5rem;
-    color: #fff;
+.beforeFight{
+display: flex;
+justify-content: space-between;
 }
 
 .fight-button {
@@ -256,7 +171,7 @@ body::before {
     transform: translateY(0);
 }
 
-.combat{
+.combat {
     color: #f1f1f1;
     display: flex;
     justify-content: center;
@@ -266,33 +181,33 @@ body::before {
 
 .actions {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    margin-top: 50px; 
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
 }
 
 .actions a {
-    background-color: #007bff; 
-    color: #fff; 
-    padding: 15px 30px; 
-    font-size: 1.5rem; 
-    text-decoration: none; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    transition: background-color 0.3s ease, transform 0.3s ease; 
+    background-color: #ff0000;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .actions a:hover {
-    background-color: #0056b3; 
-    transform: translateY(-3px); 
+    background-color: #cf2929;
+    transform: translateY(-3px);
 }
 
 .actions a:active {
-    background-color: #003f7f; 
-    transform: translateY(0); 
+    background-color: #cf2929;
+    transform: translateY(0);
 }
 
-.titre_principal{
+.titre_principal {
     color: #f1f1f1;
     display: flex;
     justify-content: center;
@@ -301,49 +216,88 @@ body::before {
 }
 
 .realfight {
-    background-color: #121212; /* Fond sombre pour mettre en valeur le texte */
-    padding: 20px; /* Un peu d'espace autour */
-    margin: 20px auto; /* Centrer la section */
-    width: 80%; /* Largeur de la section */
-    border-radius: 8px; /* Coins arrondis */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre pour le relief */
-    color: #fff; /* Texte en blanc pour contraster */
-    font-family: 'Arial', sans-serif; /* Police simple et claire */
+    background-color: #121212;
+    padding: 20px;
+    margin: 20px auto;
+    width: 40%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
 }
 
 .realfight .combat-log {
-    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour le log */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     border-radius: 6px;
     border: 1px solid #333;
 }
 
 .realfight p {
-    font-size: 16px; 
-    line-height: 1.5; 
-    margin: 10px 0; 
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 10px 0;
     padding: 10px;
-    background-color: #1e1e1e; 
-    border-left: 5px solid #ff5722; 
-    transition: background-color 0.3s ease; 
+    background-color: #1e1e1e;
+    border-left: 5px solid #ff5722;
+    transition: background-color 0.3s ease;
 }
 
 .realfight p:hover {
-    background-color: #333333; 
-    cursor: pointer; 
+    background-color: #333333;
+    cursor: pointer;
 }
 
 .realfight p:first-child {
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 .realfight p:last-child {
-    color: #ff5722; 
+    color: #ff5722;
+}
+
+.vs {
+    color: red;
+    text-decoration: solid;
+    font-size: xx-large;
+}
+
+.fight{
+display: flex;
+}
+
+.card{
+    font-size: 2.5rem;
+    color: #ff4500;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(255, 69, 0, 0.8);
 }
 
 
 /* Mise en page responsive pour mobile */
 @media (max-width: 768px) {
+    .create-hero-section {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .home h1 {
+        font-size: 2.5rem;
+    }
+
+    .create-hero-form input {
+        font-size: 1rem;
+    }
+
+    .create-button {
+        font-size: 1.2rem;
+    }
+
+    .titre_principal {
+        display: flex;
+        align-items: center;
+    }
+
     .before-fight h1 {
         font-size: 2rem;
     }
@@ -361,16 +315,4 @@ body::before {
         width: 80%;
         font-size: 1.2rem;
     }
-
-   
-
-
-    .titre_principal{
-        display: flex;
-        align-items: center;
-    }
-
-
-
-  
 }

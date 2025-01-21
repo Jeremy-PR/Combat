@@ -29,7 +29,10 @@ $combatResults = $hero->fight($monster);
 
 <body>
 
+<section class = "fight" >
 
+    <img src="./assets/img/héros.png" width ="30%" class="hero-image">
+ 
     <section class="realfight">
         <div class="combat-log">
             <?php foreach ($combatResults as $result): ?>
@@ -37,6 +40,12 @@ $combatResults = $hero->fight($monster);
             <?php endforeach; ?>
         </div>
     </section>
+
+    <img src="<?= htmlspecialchars($monster->getImage()) ?>" alt="<?= htmlspecialchars($monster->getName()) ?>" width="30%" class="monster-image">
+
+</section>
+
+
 
     <div class="actions">
         <a href="./before-fight.php">retour au préfight</a>

@@ -3,15 +3,15 @@
   class Monster {
     private string $name;
     private int $life;
-    
     private string $image;
 
-    public function __construct() {
-    
-        $this->name = "BugsBunny";
-        $this->life = 100;
-        $this->image = ""; 
+    public function __construct(string $name = "Robot404", int $life = 100, string $image = "../public/assets/img/robot.png")
+    {
+        $this->name = $name;
+        $this->life = $life;
+        $this->image = $image; // Image par défaut assignée
     }
+
 
    
     public function getName(): string {
