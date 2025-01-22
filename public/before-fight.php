@@ -61,7 +61,6 @@ $heroLife = $hero->getLife();
 
 </html>
 
-
 <!-- Objectif du fichier
 Ce fichier est la page avant le début du combat. Il sert à afficher les informations du héros et du monstre avant que le combat n'ait lieu. Il permet au joueur de visualiser ses stats et de se préparer pour le combat en cliquant sur un lien qui le redirige vers la page fight.php.
 

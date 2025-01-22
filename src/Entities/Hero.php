@@ -97,10 +97,11 @@ class Hero
             }
         }
 
+        
+
         return $combatResults;
     }
 }
-
 
 
 

@@ -33,6 +33,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
    
     showNextResult();
+
+    // code quand le combat est fini 
+
+    let timeBeforeEndFight = combatResults.length * 1000;
+
+    setTimeout(() => {
+        if(lifeHero > 0){
+            document.querySelector('#victoire').classList.toggle('hidden');
+        } else {
+            document.querySelector('#gameover').classList.toggle('hidden');
+        }
+        
+    }, timeBeforeEndFight);
+
+   
+
+
 });
 
 

@@ -203,6 +203,9 @@ body::before {
     transform: translateY(0);
 }
 
+.hidden{
+    display: none;
+}
 
 /* Mise en page responsive pour mobile */
 @media (max-width: 768px) {

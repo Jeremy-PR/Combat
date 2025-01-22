@@ -2,14 +2,21 @@
 require_once '../utils/autoloader.php';
 session_start();
 
+/**
+ * @var Hero $hero
+ */
 $hero = $_SESSION['hero'];
 $monster = new Monster();
 
 $combatResults = $hero->fight($monster);
+
+$heroRepo = new HeroRepository();
+$heroRepo->updateLife($hero);
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,33 +27,42 @@ $combatResults = $hero->fight($monster);
     <script src="./assets/Java script/combat.js" defer></script>
 
 </head>
+
 <body>
 
-<section class="fight">
-    <img src="./assets/img/héros.png" width="30%" class="hero-image">
- 
-    <section class="realfight">
-        <div class="combat-log" id="combat-log">
-         
-        </div>
+    <section class="fight">
+        <img src="./assets/img/héros.png" width="30%" class="hero-image">
+
+        <section class="realfight">
+            <div class="combat-log" id="combat-log">
+
+            </div>
+        </section>
+
+        <img src="<?= htmlspecialchars($monster->getImage()) ?>" alt="<?= htmlspecialchars($monster->getName()) ?>" width="30%" class="monster-image">
     </section>
 
-    <img src="<?= htmlspecialchars($monster->getImage()) ?>" alt="<?= htmlspecialchars($monster->getName()) ?>" width="30%" class="monster-image">
-</section>
 
-<div class="actions">
-    <a href="./home.php">Si Game Over clique ici</a>
-</div>
+    <?php if ($hero->getLife() > 0): ?>
 
-<div class="actions">
-    <a href="Fight2">Si victoire il y a, clique là</a>
-</div>
+        <div id="victoire" class="actions hidden">
+            <a href="./fight.php">Victoire</a>
+        </div>
 
-<script>
+    <?php else: ?>
 
+        <div id="gameover" class="actions hidden">
+            <a href="./home.php">Game Over</a>
+        </div>
+
+    <?php endif ?>
+
+    <script>
         const combatResults = <?php echo json_encode($combatResults); ?>;
+        const lifeHero = <?= $hero->getLife() ?>
     </script>
 </body>
+
 </html>
 
 
