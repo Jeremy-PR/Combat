@@ -209,9 +209,18 @@ body::before {
 
 /* Mise en page responsive pour mobile */
 @media (max-width: 768px) {
+
+    body {
+        background-image: url('../img/decors-jeu-combat-119.gif');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
     .create-hero-section {
-        width: 95%;
-        padding: 20px;
+        width: 50%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
     }
 
     .home h1 {

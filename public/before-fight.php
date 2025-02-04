@@ -26,35 +26,33 @@ $heroLife = $hero->getLife();
 
 <body>
 
-  
-
-<div class = "beforeFight" >
-
-<div class="create-hero-section">
-<h2 class="card"><?= htmlspecialchars($heroName) ?></h2>
-    <img src="./assets/img/héros.png" class="hero-image">
-    <p class ="card">Vie : <?= $hero->getLife() ?></p>
-</div>
 
 
+    <div class="beforeFight">
 
-<div class="create-hero-section">
-<h2 class ="card"><?= htmlspecialchars($monster->getName()) ?></h2>
-    <img src="<?= htmlspecialchars($monster->getImage()) ?>" alt="<?= htmlspecialchars($monster->getName()) ?>" class="monster-image">
-    <p class ="card">Vie : <?= $monster->getLife() ?></p>
-</div>
-   
-</div>
- 
-<div class="actions">
-<a  href="./fight.php">LET'S GO TO THE FIGHT</a>
-</div>
+        <div class="create-hero-section">
+            <h2 class="card"><?= htmlspecialchars($heroName) ?></h2>
+            <img src="./assets/img/héros.png" class="hero-image">
+            <p class="card">Vie : <?= $hero->getLife() ?></p>
+        </div>
+
+
+
+        <div class="create-hero-section">
+            <h2 class="card"><?= htmlspecialchars($monster->getName()) ?></h2>
+            <img src="<?= htmlspecialchars($monster->getImage()) ?>" alt="<?= htmlspecialchars($monster->getName()) ?>" class="monster-image">
+            <p class="card">Vie : <?= $monster->getLife() ?></p>
+        </div>
+
+    </div>
+
+    <div class="actions">
+        <a href="./fight.php">LET'S GO TO THE FIGHT</a>
+    </div>
 
     <div class="actions">
         <a href="./home.php">Si plus de vie, retour à l'accueil</a>
     </div>
-
-
     </div>
 
 </body>
